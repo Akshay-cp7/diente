@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  '17',
+                  '4',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -170,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  '7',
+                  '2',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -210,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  '24',
+                  '6',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  '40',
+                  '10',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

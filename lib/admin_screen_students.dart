@@ -34,7 +34,11 @@ class _AdStudentState extends State<AdStudent> {
               studentThree(),
               studentFour(),
               studentFive(),
-              studentSix()
+              studentSix(),
+              studentSeven(),
+              studentEight(),
+              studentNine(),
+              studentTen()
             ],
           ),
         ),
@@ -147,6 +151,226 @@ class _AdStudentState extends State<AdStudent> {
         },
         child: const Icon(Icons.add),
       ).animate().scaleXY(delay: const Duration(milliseconds: 500)),
+    );
+  }
+
+  Padding studentTen() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(20), // Round corners
+        ),
+        child: const Center(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    AssetImage('assets/images/students/student6.jpeg'),
+                radius: 30,
+              ),
+              title: Text(
+                'Student 10',
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'First year',
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                        color: Color(0xFF7CA0CA)),
+                  ),
+                ],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                  ),
+                  // Add another arrow button
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding studentNine() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(20), // Round corners
+        ),
+        child: const Center(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    AssetImage('assets/images/students/student5.jpeg'),
+                radius: 30,
+              ),
+              title: Text(
+                'Student 9',
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'First year',
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                        color: Color(0xFF7CA0CA)),
+                  ),
+                ],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                  ),
+                  // Add another arrow button
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding studentEight() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(20), // Round corners
+        ),
+        child: const Center(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    AssetImage('assets/images/students/student4.jpeg'),
+                radius: 30,
+              ),
+              title: Text(
+                'Student 8',
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'First year',
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                        color: Color(0xFF7CA0CA)),
+                  ),
+                ],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                  ),
+                  // Add another arrow button
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding studentSeven() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(20), // Round corners
+        ),
+        child: const Center(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    AssetImage('assets/images/students/student3.jpeg'),
+                radius: 30,
+              ),
+              title: Text(
+                'Student 7',
+                style: TextStyle(
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'First year',
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                        color: Color(0xFF7CA0CA)),
+                  ),
+                ],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                  ),
+                  // Add another arrow button
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 
