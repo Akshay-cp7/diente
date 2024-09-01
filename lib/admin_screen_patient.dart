@@ -1,4 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AdPatient extends StatefulWidget {
   const AdPatient({super.key});
@@ -35,6 +39,114 @@ class _AdPatientState extends State<AdPatient> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(171, 202, 212, 223),
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (context) {
+              final nameController = TextEditingController();
+              final ageController = TextEditingController();
+              File? image;
+
+              return StatefulBuilder(
+                builder: (context, setState) {
+                  return AlertDialog(
+                    title: const Text(
+                      'Add Patient',
+                      style: TextStyle(fontFamily: 'Ubuntu'),
+                    ),
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextField(
+                          controller: nameController,
+                          decoration: const InputDecoration(
+                            labelText: 'Name',
+                          ),
+                        ),
+                        TextField(
+                          controller: ageController,
+                          decoration: const InputDecoration(
+                            labelText: 'Age',
+                          ),
+                          keyboardType: TextInputType.number,
+                        ),
+                        ElevatedButton(
+                          onPressed: image != null
+                              ? null
+                              : () async {
+                                  final pickedFile = await ImagePicker()
+                                      .pickImage(source: ImageSource.gallery);
+                                  if (pickedFile != null) {
+                                    setState(() {
+                                      image = File(pickedFile.path);
+                                    });
+                                  }
+                                },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                image != null ? Colors.green : null,
+                          ),
+                          child: Text(
+                            image != null ? 'Uploaded' : 'Upload Photo',
+                            style: TextStyle(
+                              fontFamily: 'Ubuntu',
+                              color:
+                                  image != null ? Colors.white : Colors.black,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          image != null
+                              ? 'Image Selected'
+                              : 'No Image Selected',
+                          style: TextStyle(
+                            fontFamily: 'Ubuntu',
+                            color: image != null ? Colors.green : Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text(
+                          'Cancel',
+                          style: TextStyle(fontFamily: 'Ubuntu'),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          // Add student logic here
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                'Database error',
+                                style: TextStyle(fontFamily: 'Ubuntu'),
+                              ),
+                              backgroundColor: Color.fromARGB(255, 114, 35, 30),
+                            ),
+                          );
+
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text(
+                          'Add',
+                          style: TextStyle(fontFamily: 'Ubuntu'),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+          );
+        },
+        child: const Icon(Icons.add),
+      ).animate().scaleXY(delay: const Duration(milliseconds: 500)),
     );
   }
 
@@ -52,7 +164,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient5.png'),
+                backgroundImage:
+                    AssetImage('assets/images/students/student1.png'),
                 radius: 30,
               ),
               title: Text(
@@ -113,7 +226,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient5.png'),
+                backgroundImage:
+                    AssetImage('assets/images/patients/patient5.png'),
                 radius: 30,
               ),
               title: Text(
@@ -174,7 +288,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient4.png'),
+                backgroundImage:
+                    AssetImage('assets/images/patients/patient4.png'),
                 radius: 30,
               ),
               title: Text(
@@ -235,7 +350,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient3.png'),
+                backgroundImage:
+                    AssetImage('assets/images/patients/patient3.png'),
                 radius: 30,
               ),
               title: Text(
@@ -296,7 +412,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient2.png'),
+                backgroundImage:
+                    AssetImage('assets/images/patients/patient2.png'),
                 radius: 30,
               ),
               title: Text(
@@ -357,7 +474,8 @@ class _AdPatientState extends State<AdPatient> {
             padding: EdgeInsets.all(10.0),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/patient1.png'),
+                backgroundImage:
+                    AssetImage('assets/images/patients/patient1.png'),
                 radius: 30,
               ),
               title: Text(

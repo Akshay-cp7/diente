@@ -38,6 +38,9 @@ dependencies:
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   hive_flutter: ^1.1.0
+  image_picker: ^0.8.5
+  flutter_animate: ^4.5.0
+
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +67,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    
+    - assets/images/patients/
+    - assets/images/students/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
